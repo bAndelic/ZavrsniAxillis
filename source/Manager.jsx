@@ -6,7 +6,7 @@ class Manager extends React.Component {
         this.state = {
             liste:[
                 {"naziv":"",
-                  "video":[]
+                    "video":[]
                 }
             ]
         };
@@ -14,7 +14,38 @@ class Manager extends React.Component {
 
     render(){
         return(
-            <div>Bruna</div>
+            <div>
+                <div style="float:left"><Liste></Liste></div>
+                <div><Pretraga></Pretraga></div>
+                <div style="fload:right"><Pregled></Pregled></div>
+            </div>
+        );
+    }
+}
+
+class Pretraga extends React.Component {
+    render(){
+        return(
+            <div>
+                tea
+            </div>
+        );
+    }
+}
+
+class Liste extends React.Component {
+    render() {
+        return (
+            <div>
+            </div>
+        );
+    }
+}
+
+class Pregled extends React.Component {
+    render() {
+        return (
+            <div></div>
         );
     }
 }
