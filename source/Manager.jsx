@@ -1,4 +1,5 @@
 import React from 'react';
+import youtube from 'youtube-api-search'
 
 class Manager extends React.Component {
     constructor(props) {
@@ -15,9 +16,9 @@ class Manager extends React.Component {
     render(){
         return(
             <div>
-                <div style="float:left"><Liste></Liste></div>
+                <div style={{"float":"left"}}><Liste></Liste></div>
                 <div><Pretraga></Pretraga></div>
-                <div style="fload:right"><Pregled></Pregled></div>
+                <div style={{"float":"right"}}><Pregled></Pregled></div>
             </div>
         );
     }
@@ -27,7 +28,15 @@ class Pretraga extends React.Component {
     render(){
         return(
             <div>
-                tea
+                <input type="text" placeholder="Unesi pojam" id="pojam"></input>
+                <button type="submit" onClick={()=>youtube({key:'AIzaSyBCkKcHzYrylChRNEGr-ElNgI7jOuIeo7A',term:document.getElementById('pojam').value},(videos)=>{
+               videos.map(function(video){
+                console.log(video.snippet.title);
+
+
+
+                    })})}>Pretraga</button>
+
             </div>
         );
     }
